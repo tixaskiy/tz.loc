@@ -35,7 +35,7 @@ class Enrolle extends \yii\db\ActiveRecord
         return [
             [['name', 'last_name', 'group_num', 'email', 'points', 'birth_date'], 'required'],
             [['gender',  'resident'], 'boolean'],
-            [['points'],'integer'],
+            [['points'],'integer', 'max'=>200],
             ['gender', 'default', 'value' => true],
             ['resident', 'default', 'value' => true],
             ['birth_date', 'date', 'format' => 'php:Y-m-d', 'message'=>'Неверный формат даты, укажите год, месяц, число через дефис, 1999-09-29'],
